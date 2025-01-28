@@ -1,4 +1,4 @@
-Here is a `README.md` file for the provided `llm.sh` script:
+Here is the updated `README.md` file with the new script name `llm.sh` and instructions to download the script from the provided URL and execute it locally:
 
 ```markdown
 # llm.sh
@@ -114,8 +114,19 @@ initialize_config() {
 
 ## Usage
 
-To use the script, run it with the appropriate options:
+To download and execute the script locally, follow these steps:
 
+1. Download the script using `curl`:
+```bash
+curl -O https://raw.githubusercontent.com/techcto/llm-pro-devops/main/llm.sh
+```
+
+2. Make the script executable:
+```bash
+chmod +x llm.sh
+```
+
+3. Run the script with the appropriate options:
 - `-s` to start the UI server
 - `-m <model>` to specify the model
 
@@ -128,5 +139,3 @@ Example:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-This `README.md` file should provide a clear and comprehensive overview of the script, its functions, and how to use it.
