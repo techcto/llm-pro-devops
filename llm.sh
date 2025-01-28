@@ -1,4 +1,4 @@
-# Start of llm-cmd.sh
+# Start of llm.sh
 #!/bin/bash
 
 # Function to initialize GPU
@@ -91,4 +91,4 @@ while getopts ":lum:s" option; do
             ;;
     esac
 done
-# End of llm-cmd.sh
+# End of llm.sh
