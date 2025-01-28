@@ -1,0 +1,19 @@
+[Unit]
+Description=LlamaCPP Daemon
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/llamacpp/llamacpp.env
+ExecStart=llama-server -m ${LLAMA_ARG_MODEL} --port ${LLAMA_ARG_PORT} \
+    --host ${LLAMA_ARG_HOST} --threads ${LLAMA_THREADS} --ctx-size ${LLAMA_ARG_CTX_SIZE} \
+    --top-k 40 --repeat-penalty 1.1 --top-p 0.95 --min-p 0.05
+
+WorkingDirectory=/home/llamacpp
+User=llamacpp
+Group=llamacpp
+Restart=always
+RestartSec=10
+SyslogIdentifier=llamacpp
+
+[Install]
+WantedBy=multi-user.target
